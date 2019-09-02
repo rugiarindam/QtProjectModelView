@@ -36,16 +36,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::onTimeout()
 {
-   // QStringList lst;
-   // lst<<"Apple"<<"Sony"<<"Google";
 
     for(int i=0;i<3;++i)
     {
     int number=255;
-    int randomValue = qrand() % number;
+    int randomValue = qrand() % number;// Creating random number between 0 and 255
 
     // https://stackoverflow.com/questions/2618414/convert-an-int-to-a-qstring-with-zero-padding-leading-zeroes
     lst[i]=QString("Param%1:%2").arg(i).arg(randomValue,3, 10, QChar('0'));//yourNumber, 5, 10, QChar('0')
     }
-    widgetMap[1]->setList(lst);
+    widgetMap[1]->setList(lst);// Writing in first widget
 }
